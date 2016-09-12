@@ -68,6 +68,35 @@ Defaults to updating  default notification. Use .append() to create a new notifi
 
 ### Custom views
 
+For a simple layout
+
+```xml 
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="horizontal"
+              tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button_yes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+
+        android:text="@string/yes"/>
+
+    <Button
+        android:id="@+id/button_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+
+        android:text="@string/no"/>
+</Linearlayou>
+```
+
 ```java
 Notify.createCustom(
         this,
@@ -75,9 +104,8 @@ Notify.createCustom(
             this, 
             R.layout.notification_view
         )
-        .addAction(R.id.button_one, "com.theostanton.app.ONE")
-        .addAction(R.id.button_two, "com.theostanton.app.TWO")
-        .addAction(R.id.button_three, "com.theostanton.app.THREE"),
-        R.drawable.ic_3d_rotation_black_18dp
+            .addAction(R.id.button_button_yes, "com.theostanton.app.YES")
+            .addAction(R.id.button_no, "com.theostanton.app.NO"),
+        R.drawable.ic_some_drawable
 )
 ```
