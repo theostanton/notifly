@@ -107,7 +107,7 @@ Notify.createCustom(
 )
 ```
 
-And in your AndroidManifest
+And in your `AndroidManifest.xml`
 
 ```xml
 <service 
