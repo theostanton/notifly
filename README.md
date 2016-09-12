@@ -12,4 +12,4 @@ In Android 7.0 we've redesigned notifications to make them easier and faster to 
 
 * Direct reply: For real-time communication apps, the Android system supports inline replies so that users can quickly respond to an SMS or text message directly within the notification interface.
 
-* Custom views: Two new APIs enable you to leverage system decorations, such as notification headers and actions, when using custom views in notifications.
+* Custom views: Two new APIs     enable you to leverage system decorations, such as notification headers and actions, when using custom views in notifications.
