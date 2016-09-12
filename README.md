@@ -114,7 +114,7 @@ And in your AndroidManifest
         android:name=".ListenerService"
         android:exported="true"
         android:label="@string/app_name">
-        <intent-filter>git
+        <intent-filter>
             <action android:name="com.theostanton.app.YES"/>
             <action android:name="com.theostanton.app.NO"/>
         </intent-filter>
