@@ -66,7 +66,8 @@ Defaults to updating  default notification. Use .append() to create a new notifi
 .append()
 ```
 
-### Custom views
+Custom views
+======
 
 For a simple layout
 
