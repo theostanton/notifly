@@ -62,9 +62,7 @@ Notify.create(
 
 Defaults to updating  default notification. Use .append() to create a new notification. 
 
-```java
-.append()
-```
+`java .append()`
 
 Custom views
 ======
