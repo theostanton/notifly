@@ -43,7 +43,7 @@ Notify.create(
 ```java
 .onClick(
         NotificationIntent.service(SomeService.class)
-            .withArgument(SomeActivity.TEXT_ARG, "A text argument")
+            .withArgument(SomeService.TEXT_ARG, "A text argument")
 )
 ```
 
