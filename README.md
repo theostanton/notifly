@@ -24,7 +24,7 @@ Notify.create(
         R.string.title,
         R.string.content,
         R.drawable.ic_some_drawable
-    ).show();
+).show();
 ```
 
 ### PendingIntent builder
@@ -63,6 +63,8 @@ Notify.create(
 Defaults to updating  default notification. Use .append() to create a new notification. 
 
 `java .append()`
+
+
 
 Custom views
 ======
