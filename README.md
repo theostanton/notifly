@@ -110,12 +110,13 @@ Notify.createCustom(
 And in your AndroidManifest
 
 ```xml
-<service android:name=".ListenerService"
-                 android:exported="true"
-                 android:label="@string/app_name">
-            <intent-filter>git
-                <action android:name="com.theostanton.app.YES"/>
-                <action android:name="com.theostanton.app.NO"/>
-            </intent-filter>
-        </service>
+<service 
+        android:name=".ListenerService"
+        android:exported="true"
+        android:label="@string/app_name">
+        <intent-filter>git
+            <action android:name="com.theostanton.app.YES"/>
+            <action android:name="com.theostanton.app.NO"/>
+        </intent-filter>
+</service>
 ```
