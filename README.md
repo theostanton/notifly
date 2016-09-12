@@ -40,7 +40,8 @@ Notify.create(
 
 ```java
 .style(
-        ExpandedNotification.activity("Line 1", "Line 2")
+        ExpandedNotification.create("Line 1", "Line 2")
+            .title("Title when expanded")
 )
 ```
 
