@@ -6,7 +6,7 @@ A wrapper for Androids notifications, including Nougats custom views.
 
 
 
-```java
+```android
 Notify.activity(this, "Title", "Some content text", R.drawable.ic_some_drawable)
     .onClick(
             NotificationIntent.activity(SomOtherActivity.class)
