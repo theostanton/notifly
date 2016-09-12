@@ -2,7 +2,7 @@ Notifly
 =======
 Work in progress. 
 
-![](screens/logo.png)
+![](images/logo.png)
 
 A wrapper for Androids notifications, including Nougats custom views.
 
