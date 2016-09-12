@@ -16,7 +16,6 @@ public class CustomNotificationView extends RemoteViews {
 
     private final Context context;
 
-
     private CustomNotificationView(Context context, @LayoutRes int layoutId) {
         super(context.getPackageName(), layoutId);
         this.context = context;

@@ -61,7 +61,7 @@ Notify.create(
 ```java
 .reply( 
         NotificationReply.create(
-            SecondActivity.REPLY_ARG, 
+            SomeActivity.REPLY_ARG, 
             "Quick reply",
             R.drawable.ic_some_drawable,
             SomeActivity.class
