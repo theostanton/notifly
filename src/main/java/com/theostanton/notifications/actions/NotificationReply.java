@@ -1,10 +1,12 @@
-package com.theostanton.notifications;
+package com.theostanton.notifications.actions;
 
 import android.app.Activity;
 import android.content.Context;
 import android.support.annotation.DrawableRes;
 import android.support.v4.app.NotificationCompat.Action;
 import android.support.v4.app.RemoteInput;
+
+import com.theostanton.notifications.NotificationIntent;
 
 
 /**
@@ -34,7 +36,7 @@ public class NotificationReply {
 
 
         return new Action.Builder(replyIcon, replyLabel,
-                    NotificationIntent.create(activityClass).getPendingIntent(context,notificationId)
+                    NotificationIntent.activity(activityClass).getPendingIntent(context,notificationId)
                 )
                 .addRemoteInput(remoteInput)
                 .build();
