@@ -1,6 +1,8 @@
-Notify
-======
+Notifly
+=======
 Work in progress. 
+
+![](images/logo.png)
 
 A wrapper for Androids notifications, including Nougats custom views.
 

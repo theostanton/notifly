@@ -43,7 +43,7 @@ public class NotificationIntent {
     }
 
     public PendingIntent getPendingIntent(Context context, int notificationId) {
-        withArgument(Notify.ID_ARG,notificationId);
+        withArgument(Notifly.ID_ARG,notificationId);
         return getPendingIntent(context);
 
     }

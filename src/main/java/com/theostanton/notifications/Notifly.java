@@ -28,9 +28,9 @@ import static android.content.Context.NOTIFICATION_SERVICE;
 /**
  * Created by theostanton on 12/09/2016.
  */
-public class Notify extends BaseNotification {
+public class Notifly extends BaseNotification {
 
-    private static final String TAG = "Notify";
+    private static final String TAG = "Notifly";
 
     private NotificationCompat.Builder builder;
     @Nullable private NotificationIntent notificationIntent;
@@ -38,7 +38,7 @@ public class Notify extends BaseNotification {
     @Nullable private NotificationReply notificationReply;
     @Nullable private HashMap<String, NotificationAction> actions;
 
-    public Notify(Context context, @Nullable String contentTitle, String contentText, int smallIconRes) {
+    public Notifly(Context context, @Nullable String contentTitle, String contentText, int smallIconRes) {
 
         builder = new NotificationCompat.Builder(context)
                 .setContentText(contentText);
@@ -57,32 +57,32 @@ public class Notify extends BaseNotification {
 
     // Create
 
-    public static Notify create(Context context, @NonNull String contentTitle, @NonNull String contentText, @DrawableRes int smallIconRes) {
-        return new Notify(context, contentTitle, contentText, smallIconRes);
+    public static Notifly create(Context context, @NonNull String contentTitle, @NonNull String contentText, @DrawableRes int smallIconRes) {
+        return new Notifly(context, contentTitle, contentText, smallIconRes);
     }
 
-    public static Notify create(Context context, @NonNull String contentText, @DrawableRes int smallIconRes) {
-        return new Notify(context, null, contentText, smallIconRes);
+    public static Notifly create(Context context, @NonNull String contentText, @DrawableRes int smallIconRes) {
+        return new Notifly(context, null, contentText, smallIconRes);
 
     }
 
-    public static Notify create(Context context, @StringRes int contentTitleRes, @StringRes int contentTextRes, @DrawableRes int smallIconRes) {
-        return new Notify(context, context.getString(contentTitleRes), context.getString(contentTextRes), smallIconRes);
+    public static Notifly create(Context context, @StringRes int contentTitleRes, @StringRes int contentTextRes, @DrawableRes int smallIconRes) {
+        return new Notifly(context, context.getString(contentTitleRes), context.getString(contentTextRes), smallIconRes);
     }
 
-    public static Notify create(Context context, @StringRes int contentTextRes, @DrawableRes int smallIconRes) {
-        return new Notify(context, null, context.getString(contentTextRes), smallIconRes);
+    public static Notifly create(Context context, @StringRes int contentTextRes, @DrawableRes int smallIconRes) {
+        return new Notifly(context, null, context.getString(contentTextRes), smallIconRes);
     }
 
 
     // Actions
 
-    public Notify onClick(NotificationIntent notificationIntent) {
+    public Notifly onClick(NotificationIntent notificationIntent) {
         this.notificationIntent = notificationIntent;
         return this;
     }
 
-    public Notify onClick(Class<? extends Activity> activityClass) {
+    public Notifly onClick(Class<? extends Activity> activityClass) {
         Intent resultIntent = new Intent(context, activityClass);
         PendingIntent resultPendingIntent =
                 PendingIntent.getActivity(
@@ -99,27 +99,27 @@ public class Notify extends BaseNotification {
 
     // Current notifications
 
-    public Notify replaceDefault() {
+    public Notifly replaceDefault() {
         updateCurrent = true;
         return this;
     }
 
 
-    public Notify append() {
+    public Notifly append() {
         updateCurrent = false;
         return this;
     }
 
     // Expanded
 
-    public Notify style(NotificationStyle notificationStyle) {
+    public Notifly style(NotificationStyle notificationStyle) {
         this.notificationStyle = notificationStyle;
         return this;
     }
 
     // Actions
 
-    public Notify addAction(NotificationAction notificationAction) {
+    public Notifly addAction(NotificationAction notificationAction) {
         if (actions == null) actions = new HashMap<>();
         if (actions.containsKey(notificationAction.getLabel())) {
             Log.e(TAG, "Action with label already exists");
@@ -137,7 +137,7 @@ public class Notify extends BaseNotification {
 
     // Reply
 
-    public Notify reply(NotificationReply notificationReply) {
+    public Notifly reply(NotificationReply notificationReply) {
         this.notificationReply = notificationReply;
         return this;
     }
