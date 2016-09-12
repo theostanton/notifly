@@ -20,7 +20,7 @@ Notify.create(
 
 ```java
 Notify.create(
-        getApplicationContext(),
+        context,
         R.string.title,
         R.string.content,
         R.drawable.ic_some_drawable
