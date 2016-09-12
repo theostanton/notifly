@@ -94,7 +94,7 @@ For a simple layout
         android:layout_weight="1"
 
         android:text="@string/no"/>
-</Linearlayou>
+</LinearLayout>
 ```
 
 ```java
@@ -105,4 +105,17 @@ Notify.createCustom(
             .addAction(R.id.button_no, "com.theostanton.app.NO"),
         R.drawable.ic_some_drawable
 )
+```
+
+And in your AndroidManifest
+
+```xml
+<service android:name=".ListenerService"
+                 android:exported="true"
+                 android:label="@string/app_name">
+            <intent-filter>git
+                <action android:name="com.theostanton.app.YES"/>
+                <action android:name="com.theostanton.app.NO"/>
+            </intent-filter>
+        </service>
 ```
