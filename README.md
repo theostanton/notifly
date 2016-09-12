@@ -16,13 +16,31 @@ Notify.create(
 ).show();
 ```
 
-### Takes string resources
+### Accepts string resources
 
 ```java
 Notify.create(
-                getApplicationContext(),
-                R.string.title,
-                R.string.content,
-                R.drawable.ic_some_drawable
-        ).show();
+        getApplicationContext(),
+        R.string.title,
+        R.string.content,
+        R.drawable.ic_some_drawable
+    ).show();
 ```
+
+### PendingIntent builder
+
+```java
+.onClick(
+        NotificationIntent.activity(SomeActivity.class)
+            .withArgument(SomeActivity.TEXT_ARG, "A text argument")
+)
+```
+
+### On expansion 
+
+```java
+.style(
+        ExpandedNotification.activity("Line 1", "Line 2")
+)
+```
+
