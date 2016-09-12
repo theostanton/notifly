@@ -99,11 +99,8 @@ For a simple layout
 
 ```java
 Notify.createCustom(
-        this,
-        CustomNotificationView.from(
-            this, 
-            R.layout.notification_view
-        )
+        context,
+        CustomNotificationView.from(context, R.layout.notification_view)
             .addAction(R.id.button_button_yes, "com.theostanton.app.YES")
             .addAction(R.id.button_no, "com.theostanton.app.NO"),
         R.drawable.ic_some_drawable
