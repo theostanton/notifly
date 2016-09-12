@@ -29,11 +29,20 @@ Notify.create(
 ).show();
 ```
 
-### PendingIntent builder
+### Launch Activity onClick
 
 ```java
 .onClick(
         NotificationIntent.activity(SomeActivity.class)
+            .withArgument(SomeActivity.TEXT_ARG, "A text argument")
+)
+```
+
+### Launch Service onClick
+
+```java
+.onClick(
+        NotificationIntent.service(SomeService.class)
             .withArgument(SomeActivity.TEXT_ARG, "A text argument")
 )
 ```
