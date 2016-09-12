@@ -45,3 +45,39 @@ Notify.create(
 )
 ```
 
+### Quick reply
+
+```java
+.reply( 
+        NotificationReply.create(
+            SecondActivity.REPLY_ARG, 
+            "Quick reply",
+            R.drawable.ic_some_drawable,
+            SomeActivity.class
+        ) 
+)
+```
+
+### Update / New notification
+
+Defaults to updating  default notification. Use .append() to create a new notification. 
+
+```java
+.append()
+```
+
+### Custom views
+
+```java
+Notify.createCustom(
+        this,
+        CustomNotificationView.from(
+            this, 
+            R.layout.notification_view
+        )
+        .addAction(R.id.button_one, "com.theostanton.app.ONE")
+        .addAction(R.id.button_two, "com.theostanton.app.TWO")
+        .addAction(R.id.button_three, "com.theostanton.app.THREE"),
+        R.drawable.ic_3d_rotation_black_18dp
+)
+```
