@@ -14,6 +14,9 @@ Gradle:
 compile 'com.theostanton.notifly:notifly:0.1'
 ```
 
+Snippets
+--------
+
 ### Simplest example
 
 ```java
