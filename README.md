@@ -6,6 +6,13 @@ Work in progress.
 
 A wrapper for Androids notifications, including Nougats custom views.
 
+Download
+--------
+
+Gradle:
+```groovy
+compile 'com.theostanton.notifly:notifly:0.1'
+```
 
 ### Simplest example
 
