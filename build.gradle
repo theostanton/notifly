@@ -12,11 +12,11 @@ buildscript {
 apply plugin: 'com.android.library'
 
 ext {
-    bintrayRepo = 'Notifly'
+    bintrayRepo = 'Notiflyer'
     bintrayName = 'notifly'
 
     publishedGroupId = 'com.theostanton.notifly'
-    libraryName = 'Notifly'
+    libraryName = 'Notiflyer'
     artifact = 'notifly'
 
     libraryDescription = 'A notifications wrapper'
@@ -64,6 +64,7 @@ dependencies {
     compile 'com.android.support:appcompat-v7:24.2.0'
     testCompile 'junit:junit:4.12'
     compile 'com.jakewharton.timber:timber:4.3.0'
+    compile 'org.jetbrains:annotations-java5:15.0'
 }
 
 

@@ -8,4 +8,9 @@ import android.support.v4.app.NotificationCompat;
 
 public abstract class NotificationStyle {
     public abstract NotificationCompat.Style get();
+
+    @Override
+    public String toString() {
+        return "NotificationStyle{}";
+    }
 }

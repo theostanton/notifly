@@ -1,6 +1,7 @@
 Notifly
 =======
-Work in progress. 
+
+Incomplete / Work in progress. 
 
 ![](images/logo.png)
 
@@ -81,13 +82,21 @@ Notify.create(
 
 ### Update / New notification
 
-Defaults to updating  default notification. Use .append() to create a new notification. 
+Defaults to updating default notification. 
+
+Use .append() to create a new notification. 
 
 ```java
 .append()
 ```
 
+### Dismiss on click
 
+Call this method on the Activity / Service onCreate method to clear the clicked notification. 
+
+```java
+Notifly.onLaunch(this);
+```
 
 Custom views
 ======

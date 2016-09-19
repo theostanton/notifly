@@ -4,16 +4,12 @@ import android.content.Context;
 import android.util.Log;
 
 /**
- * Created by theostanton on 12/09/2016.
+ * Created by theostanton on 19/09/2016.
  */
 
-abstract class BaseNotification<T> {
+abstract class NotificationCreator {
 
-    protected static final String TAG = "BaseNotification";
-
-    public static final int DEFAULT_ID = 1066;
-    public static final String ID_ARG = "notify_id_arg";
-    protected static final boolean log = true;
+    protected static final String TAG = "NotificationCreator";
 
     protected boolean sent = false;
 
@@ -24,16 +20,17 @@ abstract class BaseNotification<T> {
     public abstract int show();
 
     protected static void log(String text, Object... args) {
-        if (log) {
+        if (Notifly.log) {
             Log.d(TAG, String.format(text, args));
         }
     }
 
-    private static void error(String text, Object... args) {
+    protected static void error(String text, Object... args) {
         Log.e(TAG, String.format(text, args));
     }
 
-    private static void error(String text, Throwable throwable, Object... args) {
+    protected static void exception(String text, Throwable throwable, Object... args) {
         Log.e(TAG, String.format(text, args), throwable);
     }
+
 }

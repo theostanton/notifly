@@ -21,7 +21,6 @@ public class NotificationReply {
     private Class<? extends Activity> activityClass;
 
     public NotificationReply(String replyTextKey, String replyLabel, @DrawableRes int replyIcon, Class<? extends Activity> activityClass) {
-
         this.replyTextKey = replyTextKey;
         this.replyLabel = replyLabel;
         this.replyIcon = replyIcon;
@@ -43,4 +42,13 @@ public class NotificationReply {
 
     }
 
+    @Override
+    public String toString() {
+        return "NotificationReply{" +
+                "replyTextKey='" + replyTextKey + '\'' +
+                ", replyLabel='" + replyLabel + '\'' +
+                ", replyIcon=" + replyIcon +
+                ", activityClass=" + activityClass +
+                '}';
+    }
 }
